@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup as bs4
 import requests
-import re
 
 def tomatoharvest():
         pages = ['1','2']
@@ -18,5 +17,4 @@ def tomatoharvest():
                         if "Tomato" in item:
                                 print(item.replace("Tomato, ", ""))
                                 
-
 tomatoharvest()
