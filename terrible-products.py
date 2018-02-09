@@ -19,11 +19,6 @@ def makeurl():
         getp = worstsoup.select('p')
         ban1 = re.search(r'.*sex.* | \bbutt.* | \bass\b | .*fuck.* | \bpenis.* | .*dick.* | \bgenital.* | \bboob.* | \banus\b | .*flesh.* | \bvagina.*',getp[2].getText().lower())
         ban2 = re.search(r'.*sex.* | \bbutt.* | \bass\b | .*fuck.* | \bpenis.* | .*dick.* | \bgenital.* | \bboob.* | \banus\b | .*flesh.* | \bvagina.*',geth2[1].getText().lower())
-        #ban2 = re.search(r'\bass\b',getp[2].getText().lower())
-        #ban3 = re.search(r'\bfuck.*',getp[2].getText().lower())
-        #ban4 = re.search(r'.*penis.*',getp[2].getText().lower())
-        #ban5 = re.search(r'.*dick.*',getp[2].getText().lower())
-        #ban6 = re.search(r'\bgenital.*',getp[2].getText().lower())
         if ban1 or ban2:
             print("NSFW product listing generated. Oops! Trying again...")
             makeurl()
